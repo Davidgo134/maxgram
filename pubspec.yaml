@@ -1,0 +1,17 @@
+
+name: maxgram
+description: "Maxgram — MAX client with Telegram-iOS-inspired UI"
+publish_to: 'none'
+version: 0.2.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  web_socket_channel: ^2.4.0
+
+flutter:
+  uses-material-design: true
