@@ -111,7 +111,7 @@ class _MaxgramChatScreenState extends State<MaxgramChatScreen> {
       backgroundColor: MaxgramColors.background,
       navigationBar: CupertinoNavigationBar(
         middle: Text(widget.chatTitle),
-        backgroundColor: MaxgramColors.background.withOpacity(0.94),
+        backgroundColor: MaxgramColors.background.withValues(alpha: 0.94),
       ),
       child: SafeArea(
         child: Column(

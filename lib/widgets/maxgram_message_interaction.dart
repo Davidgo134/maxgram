@@ -186,7 +186,7 @@ class _ContextMenuOverlayState extends State<_ContextMenuOverlay>
             onTap: widget.onDismiss,
             child: FadeTransition(
               opacity: _controller,
-              child: Container(color: Colors.black.withOpacity(0.25)),
+              child: Container(color: Colors.black.withValues(alpha: 0.25)),
             ),
           ),
         ),

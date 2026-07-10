@@ -149,8 +149,8 @@ class _MaxgramSettingsScreenState extends State<MaxgramSettingsScreen> {
               ],
             ),
             if (!isLast)
-              const Padding(
-                padding: EdgeInsets.only(left: 43),
+              Padding(
+                padding: const EdgeInsets.only(left: 43),
                 child: Divider(height: 1, color: MaxgramColors.separator),
               ),
           ],
@@ -160,6 +160,6 @@ class _MaxgramSettingsScreenState extends State<MaxgramSettingsScreen> {
   }
 
   Widget _switch(bool value, ValueChanged<bool> onChanged) {
-    return CupertinoSwitch(value: value, onChanged: onChanged, activeColor: MaxgramColors.unreadBadge);
+    return CupertinoSwitch(value: value, onChanged: onChanged, activeTrackColor: MaxgramColors.unreadBadge);
   }
 }

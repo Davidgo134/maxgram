@@ -143,7 +143,7 @@ class _MaxgramChatListScreenState extends State<MaxgramChatListScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       alignment: Alignment.bottomLeft,
       decoration: BoxDecoration(
-        color: MaxgramColors.background.withOpacity(0.94),
+        color: MaxgramColors.background.withValues(alpha: 0.94),
         border: collapseProgress > 0.5
             ? Border(bottom: BorderSide(color: MaxgramColors.separator, width: 0.5))
             : null,
@@ -161,11 +161,11 @@ class _MaxgramChatListScreenState extends State<MaxgramChatListScreen> {
       child: Container(
         height: 36,
         decoration: BoxDecoration(color: MaxgramColors.secondaryBackground, borderRadius: BorderRadius.circular(10)),
-        child: const Row(
+        child: Row(
           children: [
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             Icon(Icons.search, size: 18, color: MaxgramColors.subtitleText),
-            SizedBox(width: 6),
+            const SizedBox(width: 6),
             Text('Search', style: TextStyle(color: MaxgramColors.subtitleText, fontSize: 15)),
           ],
         ),
