@@ -118,7 +118,7 @@ class _MaxgramChatScreenState extends State<MaxgramChatScreen> {
           children: [
             Expanded(
               child: _messages.isEmpty
-                  ? const Center(child: Text('Нет сообщений', style: TextStyle(color: MaxgramColors.subtitleText)))
+                  ? Center(child: Text('Нет сообщений', style: TextStyle(color: MaxgramColors.subtitleText)))
                   : ListView.builder(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       itemCount: _messages.length,
@@ -144,7 +144,7 @@ class _MaxgramChatScreenState extends State<MaxgramChatScreen> {
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                                   decoration: BoxDecoration(color: MaxgramColors.secondaryBackground, borderRadius: BorderRadius.circular(12)),
-                                  child: Text(_reactions[msg.id]!, style: const TextStyle(fontSize: 14)),
+                                  child: Text(_reactions[msg.id]!, style: TextStyle(fontSize: 14)),
                                 ),
                               ),
                           ],
@@ -162,7 +162,7 @@ class _MaxgramChatScreenState extends State<MaxgramChatScreen> {
   Widget _buildInputBar() {
     return Container(
       padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: MaxgramColors.background,
         border: Border(top: BorderSide(color: MaxgramColors.separator, width: 0.5)),
       ),
@@ -189,7 +189,7 @@ class _MaxgramChatScreenState extends State<MaxgramChatScreen> {
             child: Container(
               width: 36,
               height: 36,
-              decoration: const BoxDecoration(color: MaxgramColors.accentBlue, shape: BoxShape.circle),
+              decoration: BoxDecoration(color: MaxgramColors.accentBlue, shape: BoxShape.circle),
               child: _sending
                   ? const Padding(padding: EdgeInsets.all(8), child: CupertinoActivityIndicator(color: Colors.white))
                   : const Icon(Icons.arrow_upward, color: Colors.white, size: 18),

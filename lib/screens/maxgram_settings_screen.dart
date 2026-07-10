@@ -89,13 +89,13 @@ class _MaxgramSettingsScreenState extends State<MaxgramSettingsScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(widget.userName, style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w600, color: MaxgramColors.titleText)),
+                Text(widget.userName, style: TextStyle(fontSize: 19, fontWeight: FontWeight.w600, color: MaxgramColors.titleText)),
                 const SizedBox(height: 2),
-                Text(widget.userStatus, style: const TextStyle(fontSize: 14, color: MaxgramColors.subtitleText)),
+                Text(widget.userStatus, style: TextStyle(fontSize: 14, color: MaxgramColors.subtitleText)),
               ],
             ),
           ),
-          const Icon(Icons.qr_code, color: MaxgramColors.accentBlue),
+          Icon(Icons.qr_code, color: MaxgramColors.accentBlue),
         ],
       ),
     );
@@ -145,7 +145,7 @@ class _MaxgramSettingsScreenState extends State<MaxgramSettingsScreen> {
                 ),
                 if (trailing != null) trailing,
                 if (showDisclosure)
-                  const Icon(Icons.chevron_right, color: MaxgramColors.mutedBadge, size: 20),
+                  Icon(Icons.chevron_right, color: MaxgramColors.mutedBadge, size: 20),
               ],
             ),
             if (!isLast)

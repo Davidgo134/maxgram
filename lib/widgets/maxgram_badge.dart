@@ -28,7 +28,7 @@ class MaxgramBadge extends StatelessWidget {
       alignment: Alignment.center,
       child: Text(
         count > 999 ? '999+' : '$count',
-        style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600),
+        style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600),
       ),
     );
   }

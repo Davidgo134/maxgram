@@ -110,7 +110,7 @@ class _MaxgramChatRowState extends State<MaxgramChatRow>
                                   chat.title,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w600,
                                     color: MaxgramColors.titleText,
@@ -119,7 +119,7 @@ class _MaxgramChatRowState extends State<MaxgramChatRow>
                               ),
                               Text(
                                 _formatTime(chat.timestamp),
-                                style: const TextStyle(fontSize: 13, color: MaxgramColors.subtitleText),
+                                style: TextStyle(fontSize: 13, color: MaxgramColors.subtitleText),
                               ),
                             ],
                           ),
@@ -131,7 +131,7 @@ class _MaxgramChatRowState extends State<MaxgramChatRow>
                                   chat.lastMessage,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(fontSize: 15, color: MaxgramColors.subtitleText),
+                                  style: TextStyle(fontSize: 15, color: MaxgramColors.subtitleText),
                                 ),
                               ),
                               const SizedBox(width: 6),
@@ -166,7 +166,7 @@ class _MaxgramChatRowState extends State<MaxgramChatRow>
           children: [
             Icon(icon, color: Colors.white, size: 20),
             const SizedBox(height: 2),
-            Text(label, style: const TextStyle(color: Colors.white, fontSize: 11)),
+            Text(label, style: TextStyle(color: Colors.white, fontSize: 11)),
           ],
         ),
       ),

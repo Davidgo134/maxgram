@@ -1,6 +1,5 @@
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import '../theme/maxgram_theme.dart';
 import '../max_protocol/max_client.dart';
 
@@ -64,7 +63,7 @@ class _MaxgramAuthScreenState extends State<MaxgramAuthScreen> {
             children: [
               const SizedBox(height: 24),
               if (_smsToken == null) ...[
-                const Text('Введите номер телефона', style: TextStyle(fontSize: 15, color: MaxgramColors.subtitleText)),
+                Text('Введите номер телефона', style: TextStyle(fontSize: 15, color: MaxgramColors.subtitleText)),
                 const SizedBox(height: 8),
                 CupertinoTextField(
                   controller: _phoneController,
@@ -79,7 +78,7 @@ class _MaxgramAuthScreenState extends State<MaxgramAuthScreen> {
                   child: _loading ? const CupertinoActivityIndicator() : const Text('Получить код'),
                 ),
               ] else ...[
-                const Text('Введите код из SMS', style: TextStyle(fontSize: 15, color: MaxgramColors.subtitleText)),
+                Text('Введите код из SMS', style: TextStyle(fontSize: 15, color: MaxgramColors.subtitleText)),
                 const SizedBox(height: 8),
                 CupertinoTextField(
                   controller: _codeController,
@@ -96,7 +95,7 @@ class _MaxgramAuthScreenState extends State<MaxgramAuthScreen> {
               ],
               if (_error != null) Padding(
                 padding: const EdgeInsets.only(top: 12),
-                child: Text(_error!, style: const TextStyle(color: MaxgramColors.swipeDelete, fontSize: 13)),
+                child: Text(_error!, style: TextStyle(color: MaxgramColors.swipeDelete, fontSize: 13)),
               ),
             ],
           ),

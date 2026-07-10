@@ -121,7 +121,7 @@ class _MaxgramMessageInteractionState extends State<MaxgramMessageInteraction>
               left: widget.message.isOutgoing ? null : 12,
               child: ScaleTransition(
                 scale: _popScale,
-                child: Text(_floatingReaction!, style: const TextStyle(fontSize: 22)),
+                child: Text(_floatingReaction!, style: TextStyle(fontSize: 22)),
               ),
             ),
         ],
@@ -214,7 +214,7 @@ class _ContextMenuOverlayState extends State<_ContextMenuOverlay>
                               onTap: () => widget.onEmojiSelected(e),
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 4),
-                                child: Text(e, style: const TextStyle(fontSize: 24)),
+                                child: Text(e, style: TextStyle(fontSize: 24)),
                               ),
                             ))
                         .toList(),
@@ -232,11 +232,11 @@ class _ContextMenuOverlayState extends State<_ContextMenuOverlay>
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       _menuItem('Reply', Icons.reply, () => widget.onAction(_MenuAction.reply)),
-                      const Divider(height: 1, color: MaxgramColors.separator),
+                      Divider(height: 1, color: MaxgramColors.separator),
                       _menuItem('Copy', Icons.copy, () => widget.onAction(_MenuAction.copy)),
-                      const Divider(height: 1, color: MaxgramColors.separator),
+                      Divider(height: 1, color: MaxgramColors.separator),
                       _menuItem('Forward', Icons.forward, () => widget.onAction(_MenuAction.forward)),
-                      const Divider(height: 1, color: MaxgramColors.separator),
+                      Divider(height: 1, color: MaxgramColors.separator),
                       _menuItem('Delete', Icons.delete, () => widget.onAction(_MenuAction.delete), isDestructive: true),
                     ],
                   ),

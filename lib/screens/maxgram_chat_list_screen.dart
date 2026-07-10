@@ -98,7 +98,7 @@ class _MaxgramChatListScreenState extends State<MaxgramChatListScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(_error!, style: const TextStyle(color: MaxgramColors.swipeDelete), textAlign: TextAlign.center),
+              Text(_error!, style: TextStyle(color: MaxgramColors.swipeDelete), textAlign: TextAlign.center),
               const SizedBox(height: 12),
               CupertinoButton(onPressed: _loadInitial, child: const Text('Повторить')),
             ],
@@ -107,13 +107,13 @@ class _MaxgramChatListScreenState extends State<MaxgramChatListScreen> {
       );
     }
     if (_chats.isEmpty) {
-      return const Center(child: Text('Нет чатов', style: TextStyle(color: MaxgramColors.subtitleText)));
+      return Center(child: Text('Нет чатов', style: TextStyle(color: MaxgramColors.subtitleText)));
     }
     return ListView.separated(
       controller: _scrollController,
       padding: EdgeInsets.zero,
       itemCount: _chats.length,
-      separatorBuilder: (_, __) => const Divider(height: 1, indent: 80, color: MaxgramColors.separator),
+      separatorBuilder: (_, __) => Divider(height: 1, indent: 80, color: MaxgramColors.separator),
       itemBuilder: (context, index) {
         final chat = _chats[index];
         return MaxgramChatRow(
@@ -145,7 +145,7 @@ class _MaxgramChatListScreenState extends State<MaxgramChatListScreen> {
       decoration: BoxDecoration(
         color: MaxgramColors.background.withOpacity(0.94),
         border: collapseProgress > 0.5
-            ? const Border(bottom: BorderSide(color: MaxgramColors.separator, width: 0.5))
+            ? Border(bottom: BorderSide(color: MaxgramColors.separator, width: 0.5))
             : null,
       ),
       child: Padding(
